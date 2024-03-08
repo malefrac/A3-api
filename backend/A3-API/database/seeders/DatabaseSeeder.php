@@ -18,16 +18,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-       $this->call(CareerSeeder::class);
-        $this->call(CourseSeeder::class); 
-        $this->call(EnviromentTypeSeeder::class);
-        $this->call(LocationSeeder::class);
-        $this->call(LearningEnviromentSeeder::class);
+       //$this->call(CareerSeeder::class);
+        //$this->call(CourseSeeder::class); 
+        //$this->call(EnviromentTypeSeeder::class);
+        //$this->call(LocationSeeder::class);
+        //$this->call(LearningEnviromentSeeder::class);
         $this->call(SchedulingEnviromentSeeder::class);
 
 
-
-       Instructor::factory()->create([
+       /**Instructor::factory()->create([
             'type' => 'Contratista',
             'profile' => 'Matematicas'
         ]);
@@ -50,6 +49,6 @@ class DatabaseSeeder extends Seeder
             'profile' => 'Ingles'
         ]); 
 
-        User::factory(5)->create();
+        User::factory(5)->create();**/
     }
 }

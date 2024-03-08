@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\CausalController;
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\ObservationController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\TechnicianController;
+use App\Http\Controllers\TypeActivityController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +24,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('location', LocationController::class);
+
