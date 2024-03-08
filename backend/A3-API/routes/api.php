@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CausalController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ObservationController;
@@ -26,4 +27,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('location', LocationController::class);
+Route::apiResource('career',CareerController::class);
+
 
