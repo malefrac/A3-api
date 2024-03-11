@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
@@ -50,7 +51,8 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        //
+        $instructors = Instructor::all();
+        return response()->json($instructors, Response::HTTP_OK);
     }
 
     /**
@@ -58,30 +60,60 @@ class InstructorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $this->applyValidator($request);
+        if(!empty($data))
+        {
+            return $data;
+        }
+
+        $instructor = Instructor::create($request->all());
+        $response = [
+            'message' => 'Registro creado exitosamente',
+            'instructor' => $instructor
+        ];
+
+        return response()->json($response, Response::HTTP_CREATED);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Instructor $instructor)
     {
-        //
+        return response()->json($instructor, Response::HTTP_OK);    
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Instructor $instructor)
     {
-        //
+        $data = $this->applyValidator($request);
+        if(!empty($data))
+        {
+            return $data;
+        }
+
+        $instructor->update($request->all());
+        $response = [
+            'message' => 'Registro actualizado exitosamente',
+            'instructor' => $instructor
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Instructor $instructor)
     {
-        //
+        $instructor->delete();
+        $response = [
+            'message' => 'Registro eliminado exitosamente',
+            'instructor' => $instructor->id
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
     }
 }

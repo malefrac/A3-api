@@ -4,6 +4,7 @@
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CausalController;
+use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ObservationController;
 use App\Http\Controllers\OrderController;
@@ -33,9 +34,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::apiResource('location', LocationController::class);
+
 Route::apiResource('career',CareerController::class);
 
-
+Route::apiResource('instructor',InstructorController::class);
 
 Route::apiResource('sheduling_enviroment', ShedulingEnviromentController::class);
 
