@@ -47,9 +47,9 @@ class DatabaseSeeder extends Seeder
         Instructor::factory()->create([
             'type' => 'Planta',
             'profile' => 'Ingles'
-        ]); 
+        ]); */
 
-        User::factory(5)->create();*/
+        User::factory(5)->create();
 
     }
 }

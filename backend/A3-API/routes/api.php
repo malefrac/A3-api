@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CausalController;
 use App\Http\Controllers\InstructorController;
@@ -28,8 +29,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::post('auth/login', [AuthController::class, 'login'])->name('auth.login');
+Route::middleware('auth:sanctum')->group(function(){Route::post('auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 });
 
 
