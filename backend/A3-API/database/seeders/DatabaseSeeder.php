@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
        //$this->call(CareerSeeder::class);
+<<<<<<< Updated upstream
         //$this->call(CourseSeeder::class); 
        // $this->call(EnviromentTypeSeeder::class);
         //$this->call(LocationSeeder::class);
@@ -27,6 +28,17 @@ class DatabaseSeeder extends Seeder
 
 /*
        Instructor::factory()->create([
+=======
+        //$this->call(CourseSeeder::class);
+        //$this->call(EnviromentTypeSeeder::class);
+        //$this->call(LocationSeeder::class);
+        //$this->call(LearningEnviromentSeeder::class);
+        $this->call(SchedulingEnviromentSeeder::class);
+
+
+
+       /*Instructor::factory()->create([
+>>>>>>> Stashed changes
             'type' => 'Contratista',
             'profile' => 'Matematicas'
         ]);
@@ -47,9 +59,18 @@ class DatabaseSeeder extends Seeder
         Instructor::factory()->create([
             'type' => 'Planta',
             'profile' => 'Ingles'
+<<<<<<< Updated upstream
         ]); */
 
         User::factory(5)->create();
+=======
+        ]);
 
+        User::factory(5)->create();*/
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+
+=======
+>>>>>>> Stashed changes
     }
 }

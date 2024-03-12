@@ -20,7 +20,7 @@ class Course extends Model
 
     public function careers()
     {
-        return $this->hasMeny(Career::class);
+        return $this->belongsTo(Career::class);
     }
 
     public function scheduling_enviroments()
