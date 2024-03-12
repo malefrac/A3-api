@@ -1,0 +1,867 @@
+{
+	"info": {
+		"_postman_id": "15423110-234d-4b59-90ac-83f25184a151",
+		"name": "A3-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33525308",
+		"_collection_link": "https://cloudy-shadow-443882.postman.co/workspace/A3-api~0c1ad677-42bb-4a88-abed-9a5a73626991/collection/33366089-15423110-234d-4b59-90ac-83f25184a151?action=share&source=collection_link&creator=33525308"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|OMknRHeWteK8jRNbw9fPsW0pUsJPvU8ktaCAhlEp60eb30f4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/location",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/location/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"location",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nueva locación\",\r\n    \"address\": \"Calle falsa 123\",\r\n    \"status\": \"Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/location",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"Nueva locación modificada\",\r\n    \"address\": \"Calle 123\",\r\n    \"status\": \"Inactivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/location/10",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"location",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"Nueva locación modificada\",\r\n    \"address\": \"Calle 123\",\r\n    \"status\": \"Inactivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/location/10",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"location",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Career",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/career",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"career"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/career/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"career",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"id\": 5,\r\n    \"name\": \"Carrera de prueba\",\r\n    \"type\": \"Prueba\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/career",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"career"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Carrera de prueba modificado\",\r\n        \"type\": \"Prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/career/5",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"career",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/career/5",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"career",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/instructor",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/instructor/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"instructor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 13,\r\n    \"document\": 121248445245,\r\n    \"fullname\": \"Prof.de prueba\",\r\n    \"sena_email\": \"pordefectfffo@example.org\",\r\n    \"personal_email\": \"ejemplfffo@example.net\",\r\n    \"phone\": \"312123388\",\r\n    \"password\": \"$2y$12$JcQLuQ7W.CR0myMEJE7JZOXP/PBv4dCi1D7jjAfDOEK4KZDnK.WoK\",\r\n    \"type\": \"Contratista\",\r\n    \"profile\": \"Ingles\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/instructor",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"document\": 121248445245,\r\n    \"fullname\": \"Prof.de prueba_modi\",\r\n    \"sena_email\": \"porfecto_modi1@example.org\",\r\n    \"personal_email\": \"ejemplfffo_modi1@example.net\",\r\n    \"phone\": \"3121554588\",\r\n    \"password\": \"$2y$12$JcQLuQ7W.CR0myMEJE7JZOXP/PBv4dCi1D7jjAfDOEK4KZDnK.WoK\",\r\n    \"type\": \"Planta\",\r\n    \"profile\": \"Fisica\"\r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/instructor/21",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"instructor",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/instructor/21",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"instructor",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LearningEnviroment",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/learning_enviroment",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"learning_enviroment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/learning_enviroment/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"learning_enviroment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/learning_enviroment/2",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"learning_enviroment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Aula230\",\r\n    \"capacity\": 41,\r\n    \"area_mt2\": 30,\r\n    \"floor\": \"2\",\r\n    \"inventory\": \"1 tv, 3 pc\",\r\n    \"type_id\": 1,\r\n    \"location_id\": 1,\r\n    \"status\": \"INACTIVO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/learning_enviroment",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"learning_enviroment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Nueva aula modificada\",\r\n    \"capacity\": 71,\r\n    \"area_mt2\": 40,\r\n    \"floor\": \"2\",\r\n    \"inventory\": \"1 tv, 3 pc\",\r\n    \"type_id\": 1,\r\n    \"location_id\": 1,\r\n    \"status\": \"INACTIVO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/learning_enviroment/2",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"learning_enviroment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": []
+		},
+		{
+			"name": "SchedulingEnviroment",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/sheduling_enviroment",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"sheduling_enviroment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/sheduling_enviroment/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"sheduling_enviroment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/sheduling_enviroment/2",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"sheduling_enviroment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_id\": 3,\r\n    \"instructor_id\": 2,\r\n    \"date_scheduling\": \"2024-01-30\",\r\n    \"initial_hour\": \"09:00:00\",\r\n    \"final_hour\": \"10:00:00\",\r\n    \"enviroment_id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/sheduling_enviroment",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"sheduling_enviroment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"course_id\": 3,\r\n    \"instructor_id\": 2,\r\n    \"date_scheduling\": \"2024-01-30\",\r\n    \"initial_hour\": \"05:00:00\",\r\n    \"final_hour\": \"08:00:00\",\r\n    \"enviroment_id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/sheduling_enviroment/2",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"sheduling_enviroment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EnviromentType",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/enviroment_type",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"enviroment_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/enviroment_type/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"enviroment_type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/enviroment_type",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"enviroment_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/enviroment_type/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"enviroment_type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/enviroment_type/5",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"enviroment_type",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/course",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/course/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"course",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/course",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/course/2",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"course",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_A3_API}}/course/1",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"course",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"joanny95@example.net\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/auth/login",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|OMknRHeWteK8jRNbw9fPsW0pUsJPvU8ktaCAhlEp60eb30f4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"qtorphy@example.com\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_A3_API}}/auth/logout",
+							"host": [
+								"{{URL_A3_API}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_A3_API",
+			"value": "http://127.0.0.1:8000/api"
+		}
+	]
+}
